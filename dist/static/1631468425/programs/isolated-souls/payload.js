@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/programs/isolated-souls", {data:[{}],fetch:{},mutations:[]});
