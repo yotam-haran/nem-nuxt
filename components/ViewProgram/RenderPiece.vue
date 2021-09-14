@@ -9,7 +9,7 @@
             </span>
             </template>
         </div>
-        <div :style='titleStyle' v-html='text' class='pieceName' />
+        <div v-if='!section' :style='titleStyle' v-html='text' class='pieceName' />
     </div>
 </template>
 
@@ -17,23 +17,26 @@
 /* eslint-disable */
 
 export default {
-  props: ['author', 'title', 'over', 'program', 'index'],
+  props: ['author', 'title', 'over', 'program', 'index', 'section'],
   computed: {
     authorDetails(){
-      return this.$store.state.authors[this.author]
+      return this.author ? this.$store.state.authors[this.author] : null;
     },
     text(){
-      const parse = str => str.replace(/\[(.*?)\]/g, '<i>$1</i>');
-      let text = parse(this.title);
-      if(this.over){
-        const { title, author } = this.over;
-        text += ' over ' + parse(title);
-        if(author){
-          const { name, years } = this.$store.state.authors[author]
-          text += ` by ${name} (${years[0]} - ${years[1]})`;
+        if(this.section)
+            return null;
+
+        const parse = str => str.replace(/\[(.*?)\]/g, '<i>$1</i>');
+        let text = parse(this.title);
+        if(this.over){
+            const { title, author } = this.over;
+            text += ' over ' + parse(title);
+            if(author){
+                const { name, years } = this.$store.state.authors[author]
+                text += ` by ${name} (${years[0]} - ${years[1]})`;
+            }
         }
-      }
-      return text;
+        return text;
     },
     titleStyle(){
       return !this.author ? { gridColumn: 'span 2' } : undefined
@@ -42,12 +45,23 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
 .pieceName {
   margin-bottom: 20px;
 }
 .authorYears {
   margin-left: 6px;
+}
+.sectionTitle {
+    color: #008848;
+    margin-top: 12px;
+    font-size: 1.1em;
+    font-weight: bold;
+
+    & img {
+        width: 12px;
+        margin-right: 8px;
+    }
 }
 
 @media screen and (min-width: 769px){

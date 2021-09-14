@@ -54,7 +54,11 @@ export default {
     },
     methods: {
         widthOf(image){
-            return image.style.maxWidth.replace('px', '');
+            const { maxWidth } = image.style;
+            if(maxWidth === '100vw')
+                return 768;
+
+            return maxWidth.replace('px', '');
         }
     }
 }

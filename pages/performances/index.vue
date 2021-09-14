@@ -10,7 +10,7 @@
       <no-performances v-else />
       <div id='pastPerformances' v-if='list.past.length'>
         <h2>Past</h2>
-        <performance-list :performances='list.past' />
+        <performance-list :performances='list.past' :isPast='true' />
       </div>
     </div>
   </section>

@@ -11,8 +11,8 @@
           <img alt='Location pin icon' :src="$imagekit('icons/map-pin.svg')" /></a>
           {{ performance.location }}
         </div>
-        <a :href='performance.tix' className='ticketsButton' target='_blank'>
-          <img alt='Tickets icon' v-if='performance.tix' :src="$imagekit('icons/tickets.svg')" />
+        <a v-if='!isPast && performance.tix' :href='performance.tix' class='ticketsButton' target='_blank'>
+          <img alt='Tickets icon' :src="$imagekit('icons/tickets.svg')" />
         </a>
       </div>
     </div>
@@ -24,7 +24,8 @@
 export default {
   props: {
     performances: Array,
-    homeDisplay: Boolean
+    homeDisplay: Boolean,
+    isPast: Boolean
   },
   computed: {
     programs(){
@@ -34,7 +35,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
 #performanceList {
   display: flex;
   flex-direction: column;
@@ -50,7 +51,7 @@ export default {
 }
 .performanceLocation img {
   max-width: 14px;
-  margin: 0 8px;
+  margin-right: 8px;
 }
 .performanceLocation a {
   height: 20px;
@@ -79,15 +80,19 @@ export default {
 @media screen and (min-width: 769px){
   #performanceList {
     display: grid;
-    grid-template-columns: 2fr 160px 3fr;
+    grid-template-columns: 2fr 200px 3fr;
     grid-gap: 24px 12px;
   }
   .homeDisplay {
     padding: 0 0 16px 0;
-    grid-template-columns: 2fr 3fr !important;
+    grid-template-columns: 200px 3fr !important;
   }
   .performanceLocation {
     padding-bottom: 0;
+
+    & img {
+        margin-left: 8px;
+    }
   }
 }
 </style>

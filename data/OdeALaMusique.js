@@ -25,5 +25,10 @@ export default {
     { author: 'visee', title: 'Allemande [La Moutine]' },
     { author: 'camus', title: 'De Toutes les Beautes' }
   ],
-  // image: { src: 'ScenesPastorales.jpg', height: '460px', style: { maxWidth: '400px', transform: 'translate3d(-40px, -40px, 0)' }, side: 'left' }
+  images: [
+      { name: 'nem-mapa2', height: 440, style: { maxWidth: '400px', transform: 'translate3d(-20px, -52px, 0)' }, side: 'left' }
+  ],
+  mobileImage: {
+    name: 'nem-mapa2', height: 340, style: { maxWidth: '100vw', transform: 'translate3d(0px, -100px, 0)' }
+  }
 }

@@ -52,6 +52,7 @@ export default {
   padding: 0 12px 24px 0;
   z-index: 2;
   text-align: right;
+  bottom: 92px;
 }
 
 .ensembleName {
@@ -77,6 +78,7 @@ export default {
   }
   #topBanner #text {
     padding: 40px 80px;
+    bottom: unset;
   }
   .ensembleName {
     font-size: 52px;

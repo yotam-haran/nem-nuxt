@@ -32,5 +32,9 @@ export default {
 canvas {
     cursor: pointer;
     transform: translate(2px, 4px);
+
+    &:hover {
+        filter: brightness(1.4);
+    }
 }
 </style>

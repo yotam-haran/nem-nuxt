@@ -1,5 +1,5 @@
 <template>
-  <div id='viewProgram' @click='close'>
+  <div id='viewProgram'>
     <logo-title>{{ program.name }}</logo-title>
     <div v-if='program.guests' id='guests'>
       <div>Guest{{ program.guests.length > 1 ? 's' : '' }}</div>
@@ -42,12 +42,6 @@ export default {
       return this.$store.state.programs[program];
     }
   },
-  methods: {
-    close(){
-      if(event.target.id === 'viewProgram')
-        this.$router.push('/programs');
-    }
-  }
 }
 </script>
 
@@ -74,9 +68,9 @@ export default {
         display: flex;
         flex-direction: column;
     }
-    #setList > div :last-child {
-        padding-bottom: 32px;
-    }
+    // #setList > div :last-child {
+    //     padding-bottom: 32px;
+    // }
     #description {
         padding: 8px 0 24px;
     }
