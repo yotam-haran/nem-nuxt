@@ -72,6 +72,8 @@ export default {
 </script>
 
 <style lang='scss'>
+@use '../contact-us/style.scss';
+
 #contactUs  {
     #mce-responses {
         text-align: center;

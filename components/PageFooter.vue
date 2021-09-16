@@ -1,28 +1,26 @@
 <template>
-    <div :style='{ display: "contents" }'>
-        <footer>
-            <div id='photosAttribution'>
-                Photos by our dear friend <a href='https://www.facebook.com/tariqtkhawaja/'>Tariq Khawaja</a>
-                <span v-if='$route.path === "/about"'>, icons by <a href="https://www.freepik.com" title="Freepik">Freepik</a> @ <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></span>
-            </div>
-            <div>
-                Contact us at <email-link />
-                <div id='copyright'>© Nymphes et Monstres 2021</div>
-            </div>
-            <div id='socialMedia'>
-                <nuxt-link to='/subscribe' id='joinMailingList'>
-                    <img alt='Join mailing list' src='https://upload.wikimedia.org/wikipedia/commons/e/ec/Circle-icons-mail.svg' />
-                    <div>Join our mailing list</div>
-                </nuxt-link>
-                <a href='https://www.youtube.com/channel/UCjBoCifOzYxop5cfNX_qp2Q'>
-                    <img alt='Go to youtube channel' :src="$imagekit('icons/youtube.svg')" class='youtube' />
-                </a>
-                <a href='https://www.facebook.com/nymphesmonstres/'>
-                    <img alt='Go to facebook page' :src="$imagekit('icons/facebook.svg')" class='facebook' />
-                </a>
-            </div>
-        </footer>
-    </div>
+    <footer>
+        <div id='photosAttribution'>
+            Photos by our dear friend <a href='https://www.facebook.com/tariqtkhawaja/'>Tariq Khawaja</a>
+            <span v-if='$route.path === "/about"'>, icons by <a href="https://www.freepik.com" title="Freepik">Freepik</a> @ <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></span>
+        </div>
+        <div>
+            Contact us at <email-link />
+            <div id='copyright'>© Nymphes et Monstres 2021</div>
+        </div>
+        <div id='socialMedia'>
+            <nuxt-link to='/subscribe' id='joinMailingList'>
+                <img alt='Join mailing list' src='https://upload.wikimedia.org/wikipedia/commons/e/ec/Circle-icons-mail.svg' />
+                <div>Join our mailing list</div>
+            </nuxt-link>
+            <a href='https://www.youtube.com/channel/UCjBoCifOzYxop5cfNX_qp2Q'>
+                <img alt='Go to youtube channel' :src="$imagekit('icons/youtube.svg')" class='youtube' />
+            </a>
+            <a href='https://www.facebook.com/nymphesmonstres/'>
+                <img alt='Go to facebook page' :src="$imagekit('icons/facebook.svg')" class='facebook' />
+            </a>
+        </div>
+    </footer>
 </template>
 
 <style lang='scss'>
