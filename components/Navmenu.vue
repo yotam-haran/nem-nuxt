@@ -65,8 +65,9 @@ export default {
   pointer-events: all;
   border: 2px solid black;
   border-radius: 100px;
-  box-shadow: 2px 2px 16px -4px #ccc;
+  box-shadow: 2px 2px 16px -4px #bbb;
   filter: invert(100%);
+  /* background-color: #fff; */
 }
 
 #menuOptions {
