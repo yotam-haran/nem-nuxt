@@ -5,7 +5,7 @@ import { format, parse, compareAsc } from 'date-fns';
 const locations = {
   mapa: { location: 'Studio MAPA Nederland, Haarlem', mapsRef: 'xf9sY5WrzBhDT2Yh9' },
   BUC: { location: 'Brighton Unitarian Church', mapsRef: 'bRaW4iUU8r2VDarv8', tix: 'https://www.brightonfringe.org/whats-on/the-french-connection-146524/' },
-  'V&D': { location: 'V&D Haarlem', mapsRef: 'FxKCCnBXTL7t5Kke8' },
+  'V&D': { location: 'V&D Haarlem', mapsRef: 'FxKCCnBXTL7t5Kke8', tix: 'https://mapa.stager.nl/web/tickets' },
 }
 
 const now = new Date();
@@ -14,10 +14,10 @@ let performances = [
     { program: 'isolated-souls', datetime: '25-09-2021 20:00', location: 'V&D' },
     { program: 'isolated-souls', datetime: '26-09-2021 18:00', location: 'V&D' },
     { program: 'isolated-souls', datetime: '26-09-2021 20:00', location: 'V&D' },
-    { program: 'french-connection', datetime: '18-06-2021 18:30', location: 'BUC'  },
-    { program: 'french-connection', datetime: '18-06-2021 20:00', location: 'BUC'  },
-    { program: 'french-connection', datetime: '19-06-2021 18:30', location: 'BUC'  },
-    { program: 'french-connection', datetime: '19-06-2021 20:00', location: 'BUC'  },
+    { program: 'french-connection', datetime: '18-06-2021 18:30', location: 'BUC' },
+    { program: 'french-connection', datetime: '18-06-2021 20:00', location: 'BUC' },
+    { program: 'french-connection', datetime: '19-06-2021 18:30', location: 'BUC' },
+    { program: 'french-connection', datetime: '19-06-2021 20:00', location: 'BUC' },
 ];
 performances.forEach(p => p.datetime = parse(p.datetime, 'dd-MM-yyyy HH:mm', new Date()));
 performances = { future: performances.filter(p => compareAsc(p.datetime, now) >= 0), past: performances.filter(p => compareAsc(p.datetime, now) < 0) };

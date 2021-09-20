@@ -1,10 +1,11 @@
 <template>
   <div :style='{ display: "contents "}'>
     <div id='navMenu' :class='{ menuOpen }'>
-        <object
+        <img
             id='menuToggle'
-            :data="$imagekit('icons/menu-icon.svg')"
+            :src="require('../assets/menu-icon.svg')"
             @click='menuOpen = true'
+            @touchstart='menuOpen = true'
         />
       <div id='menuOptions' :style='{ visibility }'>
         <nuxt-link to='/'>Home</nuxt-link>
@@ -59,15 +60,14 @@ export default {
   pointer-events: none;
 }
 
-#navMenu object {
+#navMenu img {
   width: 44px;
   height: 44px;
   pointer-events: all;
-  border: 2px solid black;
+  border: 2px solid #fff;
   border-radius: 100px;
-  box-shadow: 2px 2px 16px -4px #bbb;
-  filter: invert(100%);
-  /* background-color: #fff; */
+  box-shadow: 2px 2px 8px -3px #000;
+  background-color: #fff;
 }
 
 #menuOptions {
