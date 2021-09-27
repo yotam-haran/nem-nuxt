@@ -1,6 +1,6 @@
 <template>
     <div :style='{ display: "contents" }'>
-        <section id='contactUs'>
+        <section id='formWrapper'>
             <img alt='Nymphes et Monstres performing in Utrecht' :src="$imagekit('utrecht-synagogue', 'w-500,e-contrast,e-sharpen')" />
             <form
                 action="https://katcarson.us1.list-manage.com/subscribe/post?u=01b91115c492f0a79fef40b63&amp;id=9606dec26a"
@@ -72,9 +72,9 @@ export default {
 </script>
 
 <style lang='scss'>
-@use '../contact-us/style.scss';
+@use '../../components/EmailForm.scss';
 
-#contactUs  {
+#formWrapper  {
     #mce-responses {
         text-align: center;
     }

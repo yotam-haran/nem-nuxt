@@ -57,7 +57,7 @@ export default {
   },
 
   env: {
-    sitekey: true || process.env.NODE_ENV === 'production'
+    sitekey: process.env.NODE_ENV === 'production'
         ? '6LfqjlwcAAAAAAOG891KDFZL5bz7EaeQr77qn8T3'
         : '6LeXBlscAAAAAKNnd8EDUZkewVTamlgj4f-bdIPy'
   },

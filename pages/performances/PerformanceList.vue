@@ -7,11 +7,18 @@
       <div class='performanceDate'>{{ performance.datetime }}</div>
       <div class='performanceLocation'>
         <div>
-          <a :href='`https://goo.gl/maps/${performance.mapsRef}`' target='_blank'>
-          <img alt='Location pin icon' :src="$imagekit('icons/map-pin.svg')" /></a>
-          {{ performance.location }}
+            <a :href='`https://goo.gl/maps/${performance.mapsRef}`' target='_blank' rel='noreferrer'>
+                <img alt='Location pin icon' :src="$imagekit('icons/map-pin.svg')" />
+            </a>
+            {{ performance.location }}
         </div>
-        <a v-if='!isPast && performance.tix' :href='performance.tix' class='ticketsButton' target='_blank'>
+        <a
+            v-if='!isPast && performance.tix'
+            :href='performance.tix'
+            class='ticketsButton'
+            :target='performance.tix && performance.tix.startsWith("http") ? "_blank" : undefined'
+            rel='noreferrer'
+        >
           <img alt='Tickets icon' :src="$imagekit('icons/tickets.svg')" />
         </a>
       </div>

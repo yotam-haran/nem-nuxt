@@ -1,7 +1,7 @@
 <template>
   <section id='programs'>
     <div id='programImages'>
-      <template v-if='!current'>
+      <template v-if='!program'>
         <div class='imageWrapper mobile top'>
           <img alt='Nymphes et Monstres peforming Scenes Pastorales' :src='$imagekit("pycombe")' />
         </div>
@@ -15,15 +15,15 @@
           </div>
         </div>
       </template>
-      <template v-else-if='programs[current].images'>
-        <div class='imageWrapper nonMobile' v-for='image in programs[current].images' :key='image.name' :style='{ height: image.height + "px" }'>
-          <img :style='image.style' :src="$imagekit(image.name, `w-${widthOf(image)}`)" :alt='programs[current].name' />
+      <template v-else-if='program.images'>
+        <div class='imageWrapper nonMobile' v-for='image in program.images' :key='image.name' :style='{ height: image.height + "px" }'>
+          <img :style='image.style' :src="$imagekit(image.name, `w-${widthOf(image)}`)" :alt='program.name' />
         </div>
-        <div class='imageWrapper mobile' :style='{ height: programs[current].mobileImage.height + "px" }'>
+        <div class='imageWrapper mobile' :style='{ height: program.mobileImage.height + "px" }'>
           <img
-            :style='programs[current].mobileImage.style'
-            :src="$imagekit(programs[current].mobileImage.name, `w-${widthOf(programs[current].mobileImage)}`)"
-            :alt='programs[current].name'
+            :style='program.mobileImage.style'
+            :src="$imagekit(program.mobileImage.name, `w-${widthOf(program.mobileImage)}`)"
+            :alt='program.name'
         />
         </div>
       </template>
@@ -43,13 +43,13 @@
 <script>
 /* eslint-disable */
 export default {
+    props: {
+        program: Object
+    },
     data: () => ({ order: ['french-connection', 'isolated-souls', 'scenes-pastorales', 'ode-a-la-musique'] }),
     computed: {
-        current(){
-        return this.$route.params.program
-        },
         programs(){
-        return this.$store.state.programs
+            return this.$store.state.programs
         }
     },
     methods: {

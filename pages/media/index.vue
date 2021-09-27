@@ -12,11 +12,10 @@
         </div>
         <logo-title>Videos</logo-title>
         <div id='videoGallery'>
-            <div v-for='(video, index) of videos' :key='video.id'>
+            <div v-for='(video, index) of videos' :key='video.id' @click='onDisplay = { index, type: "video" }'>
                 <img
                     :src='`http://img.youtube.com/vi/${video.id}/hqdefault.jpg`'
                     :alt='video.title'
-                    @click='onDisplay = { index, type: "video" }'
                 />
                 <img class='playVideo' :src='require("../../assets/play-icon.svg")' alt='Play video' />
             </div>

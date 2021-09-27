@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/tix/2021-10-10", {data:[{}],fetch:{},mutations:[]});
