@@ -54,6 +54,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  cursor: pointer;
 }
 
 #navMenu:not(.menuOpen) {
@@ -96,7 +97,7 @@ export default {
   border-top: 1px solid #ccc;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1020px) {
   #navMenu {
     display: none;
   }

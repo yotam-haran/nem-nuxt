@@ -52,7 +52,7 @@ h2 {
   margin: 8px 0;
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 1020px){
   #performances > div:not(#performancesImage) {
     width: auto;
     margin-left: 0;

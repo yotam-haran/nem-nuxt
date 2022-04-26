@@ -2,6 +2,7 @@ import ScenesPastorales from '../data/ScenesPastorales';
 import OdeALaMusique from '../data/OdeALaMusique';
 import IsolatedSouls from '../data/IsolatedSouls';
 import FrenchConnection from '../data/FrenchConnection';
+import MistressMaidenMonster from '../data/MistressMaidenMonster';
 
 export const state = () => ({
     authors: {
@@ -32,5 +33,6 @@ export const state = () => ({
       'isolated-souls': IsolatedSouls,
       'ode-a-la-musique': OdeALaMusique,
       'french-connection': FrenchConnection,
+      'mistress-maiden-monster': MistressMaidenMonster
     }
 });

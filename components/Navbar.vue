@@ -35,7 +35,7 @@
   color: inherit;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1020px) {
   .navButtons {
     display: flex;
   }

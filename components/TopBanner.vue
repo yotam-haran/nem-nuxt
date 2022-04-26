@@ -1,29 +1,11 @@
 <template>
-  <div id='topBanner'>
-    <div id='bannerImage'>
-      <img alt="Nymphes et Monstres" :src="image">
-    </div>
+  <div id='topBanner' role='banner' aria-label='Hero Image'>
     <div id='text'>
       <div class='ensembleName'>Nymphes et Monstres</div>
       <div class='ensembleDescription'>French Baroque with a fresh perspective</div>
     </div>
   </div>
 </template>
-
-<script>
-/* eslint-disable */
-
-export default {
-  mounted(){
-        const isMobile = window.innerWidth <= 768
-        this.image = this.$imagekit(
-            'tariq-full-group-' + (!isMobile ? 'tree-trunk' : 'background'),
-            `q-${!isMobile ? 80 : 60},w-${window.innerWidth}`
-        );
-  },
-  data: () => ({ image: null })
-}
-</script>
 
 <style>
 #topBanner {
@@ -36,17 +18,13 @@ export default {
   justify-content: flex-end;
   overflow: hidden;
   height: 100vh;
+  width: 100%;
+  background-image: url(https://ik.imagekit.io/nem/tr:q-60/tariq-full-group-background.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
 }
 
-#bannerImage {
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-}
-#topBanner img {
-  height: 100vh;
-}
 #topBanner #text {
   position: relative;
   padding: 0 12px 24px 0;
@@ -63,18 +41,12 @@ export default {
   font-size: 18px;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1020px) {
   #topBanner {
     height: 100vh;
     margin-top: 0;
-  }
-  #bannerImage {
-    top: -160px;
-  }
-  #topBanner img {
-    width: 100%;
-    transform: none;
-    height: auto;
+    background-position-y: -160px;
+    background-image: url(https://ik.imagekit.io/nem/tr:q-80/tariq-full-group-tree-trunk.jpg);
   }
   #topBanner #text {
     padding: 40px 80px;

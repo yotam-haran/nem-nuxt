@@ -64,7 +64,7 @@ export default {
     }
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 1020px){
   .pieceName {
     margin-bottom: 0;
   }

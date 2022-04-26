@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/programs/french-connection", {data:[{}],fetch:{},mutations:[]});

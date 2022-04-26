@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/programs/scenes-pastorales", {data:[{}],fetch:{},mutations:[]});

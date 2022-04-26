@@ -98,7 +98,7 @@ h1 {
   margin-bottom: 4px;
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 1020px){
   #homeAbout, #homePerformances {
     margin-top: 40px;
     flex-direction: row;

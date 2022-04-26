@@ -194,7 +194,7 @@ h1 {
   justify-content: center;
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 1020px){
   .ensembleAbout {
     margin-top: 40px;
   }

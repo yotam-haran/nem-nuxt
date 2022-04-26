@@ -84,21 +84,21 @@ export default {
 }
 
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 1020px){
   #performanceList {
     display: grid;
-    grid-template-columns: 2fr 200px 3fr;
-    grid-gap: 24px 12px;
+    grid-template-columns: 2fr 180px 3fr;
+    grid-gap: 1.5rem 1.1rem;
   }
   .homeDisplay {
     padding: 0 0 16px 0;
-    grid-template-columns: 200px 3fr !important;
+    grid-template-columns: 180px 3fr !important;
   }
   .performanceLocation {
     padding-bottom: 0;
 
     & img {
-        margin-left: 8px;
+        margin-left: 1rem;
     }
   }
 }

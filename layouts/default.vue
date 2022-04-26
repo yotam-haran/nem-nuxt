@@ -56,7 +56,7 @@ section {
   text-align: justify;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1020px) {
   h1 {
     font-size: 40px;
 

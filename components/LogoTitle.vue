@@ -1,5 +1,5 @@
 <template>
-    <component :is='tagName'>
+    <component :is='tagName' style="text-align: left">
         <img
             class='logoImage'
             :style='imgStyle'

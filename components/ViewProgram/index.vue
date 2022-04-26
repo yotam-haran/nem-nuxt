@@ -97,7 +97,7 @@ export default {
     }
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 1020px){
   #viewProgram {
     width: auto;
     margin-left: 0;

@@ -46,7 +46,7 @@ export default {
     props: {
         program: Object
     },
-    data: () => ({ order: ['french-connection', 'isolated-souls', 'scenes-pastorales', 'ode-a-la-musique'] }),
+    data: () => ({ order: ['mistress-maiden-monster', 'french-connection', 'isolated-souls', 'scenes-pastorales', 'ode-a-la-musique'] }),
     computed: {
         programs(){
             return this.$store.state.programs
@@ -107,7 +107,7 @@ a {
   margin: 8px 0 16px;
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 1020px){
   #programs {
     margin-top: 40px;
   }

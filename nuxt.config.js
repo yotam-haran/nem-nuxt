@@ -19,8 +19,8 @@ export default {
     ],
     script: [
         { src: 'https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js', defer: true },
-        { src: 'https://cdn.jsdelivr.net/npm/ismobilejs@1/dist/isMobile.min.js', defer: true },
-        { src: 'https://www.google.com/recaptcha/api.js?render=explicit', defer: true, async: true },
+        // { src: 'https://cdn.jsdelivr.net/npm/ismobilejs@1/dist/isMobile.min.js', defer: true },
+        // { src: 'https://www.google.com/recaptcha/api.js?render=explicit', defer: true, async: true },
     ]
   },
 
