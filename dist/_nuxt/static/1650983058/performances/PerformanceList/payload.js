@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/performances/PerformanceList", {data:[{}],fetch:{},mutations:[]});
